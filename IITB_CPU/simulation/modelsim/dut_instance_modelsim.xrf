@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/db/dut_instance.cbx.xml
+design_name = hard_block
+design_name = IITB_CPU
+instance = comp, \~QUARTUS_CREATED_GND~I\, ~QUARTUS_CREATED_GND~I, IITB_CPU, 1
+instance = comp, \CLK_output~output\, CLK_output~output, IITB_CPU, 1
+instance = comp, \RST~input\, RST~input, IITB_CPU, 1
+instance = comp, \CLK~input\, CLK~input, IITB_CPU, 1
+instance = comp, \~QUARTUS_CREATED_UNVM~\, ~QUARTUS_CREATED_UNVM~, IITB_CPU, 1
+instance = comp, \~QUARTUS_CREATED_ADC1~\, ~QUARTUS_CREATED_ADC1~, IITB_CPU, 1
+instance = comp, \~QUARTUS_CREATED_ADC2~\, ~QUARTUS_CREATED_ADC2~, IITB_CPU, 1

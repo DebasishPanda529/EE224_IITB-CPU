@@ -1,0 +1,50 @@
+|DUT
+input_vector[0] => sign_extend_6:add_instance.SE_in[0]
+input_vector[1] => sign_extend_6:add_instance.SE_in[1]
+input_vector[2] => sign_extend_6:add_instance.SE_in[2]
+input_vector[3] => sign_extend_6:add_instance.SE_in[3]
+input_vector[4] => sign_extend_6:add_instance.SE_in[4]
+input_vector[5] => sign_extend_6:add_instance.SE_in[5]
+output_vector[0] <= sign_extend_6:add_instance.SE_out[0]
+output_vector[1] <= sign_extend_6:add_instance.SE_out[1]
+output_vector[2] <= sign_extend_6:add_instance.SE_out[2]
+output_vector[3] <= sign_extend_6:add_instance.SE_out[3]
+output_vector[4] <= sign_extend_6:add_instance.SE_out[4]
+output_vector[5] <= sign_extend_6:add_instance.SE_out[5]
+output_vector[6] <= sign_extend_6:add_instance.SE_out[6]
+output_vector[7] <= sign_extend_6:add_instance.SE_out[7]
+output_vector[8] <= sign_extend_6:add_instance.SE_out[8]
+output_vector[9] <= sign_extend_6:add_instance.SE_out[9]
+output_vector[10] <= sign_extend_6:add_instance.SE_out[10]
+output_vector[11] <= sign_extend_6:add_instance.SE_out[11]
+output_vector[12] <= sign_extend_6:add_instance.SE_out[12]
+output_vector[13] <= sign_extend_6:add_instance.SE_out[13]
+output_vector[14] <= sign_extend_6:add_instance.SE_out[14]
+output_vector[15] <= sign_extend_6:add_instance.SE_out[15]
+
+
+|DUT|sign_extend_6:add_instance
+SE_in[0] => SE_out[0].DATAIN
+SE_in[1] => SE_out[1].DATAIN
+SE_in[2] => SE_out[2].DATAIN
+SE_in[3] => SE_out[3].DATAIN
+SE_in[4] => SE_out[4].DATAIN
+SE_in[5] => SE_out[5].DATAIN
+SE_out[0] <= SE_in[0].DB_MAX_OUTPUT_PORT_TYPE
+SE_out[1] <= SE_in[1].DB_MAX_OUTPUT_PORT_TYPE
+SE_out[2] <= SE_in[2].DB_MAX_OUTPUT_PORT_TYPE
+SE_out[3] <= SE_in[3].DB_MAX_OUTPUT_PORT_TYPE
+SE_out[4] <= SE_in[4].DB_MAX_OUTPUT_PORT_TYPE
+SE_out[5] <= SE_in[5].DB_MAX_OUTPUT_PORT_TYPE
+SE_out[6] <= <GND>
+SE_out[7] <= <GND>
+SE_out[8] <= <GND>
+SE_out[9] <= <GND>
+SE_out[10] <= <GND>
+SE_out[11] <= <GND>
+SE_out[12] <= <GND>
+SE_out[13] <= <GND>
+SE_out[14] <= <GND>
+SE_out[15] <= <GND>
+
+

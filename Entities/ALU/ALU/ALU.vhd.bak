@@ -1,0 +1,52 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity alu_beh is
+ generic(
+   operand_width : integer:=16);
+ port (
+   ALU_A: in std_logic_vector(operand_width-1 downto 0);
+   ALU_B: in std_logic_vector(operand_width-1 downto 0);
+	CV: in std_logic_vector(1 downto 0);
+   ALU_C: out std_logic_vector(operand_width-1 downto 0)) ;
+end alu_beh;
+
+architecture a1 of alu_beh is
+
+ function add(A: in std_logic_vector(operand_width-1 downto 0);
+  B: in std_logic_vector(operand_width-1 downto 0))
+    return std_logic_vector is
+
+    variable sum : std_logic_vector(operand_width-1 downto 0) := (others => '0');
+	 variable carry : std_logic_vector(operand_width-1 downto 0) := (others => '0');
+	 
+   begin
+     		for i in 0 to (operand_width-1) loop 
+			if i=0 then
+				sum(i) :=  A(i) xor B(i);
+				carry(i) := A(i) and B(i) ;
+			else
+			   sum(i) :=  A(i) xor B(i) xor carry(i-1);
+				carry(i) := (A(i) and B(i)) or (carry(i-1) and (A(i) xor B(i))) ;
+			end if;
+		end loop;
+    
+    return carry(operand_width-1) & sum; 
+ end add;
+ 
+begin  
+
+alu_proc: process(A,B)   --encoding for ALU operations: ADD(00), SUB(01), NAND(10), 2S(11)
+
+if CV = "00" then
+  ALU_C <= add(ALU_A, ALU_B);
+elsif CV = "01" then
+  ALU_C <= ALU_A xor ALU_B;
+elsif CV = "10" then
+  ALU_C <= ALU_A nand ALU_B;
+else
+  ALU_C <= ALU_A and ALU_B;
+  
+end process;
+end a1;
+ 

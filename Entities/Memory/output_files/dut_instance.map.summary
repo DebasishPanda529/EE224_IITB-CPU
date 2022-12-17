@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Sat Dec 17 19:07:53 2022
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : dut_instance
+Top-level Entity Name : memory_unit
+Family : MAX 10
+Total logic elements : 108
+    Total combinational functions : 105
+    Dedicated logic registers : 3
+Total registers : 3
+Total pins : 52
+Total virtual pins : 0
+Total memory bits : 1,048,576
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

@@ -1,0 +1,135 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity register_file is 
+    port(
+        RF_A1,RF_A2,RF_A3 : in std_logic_vector(2 downto 0);         ---register encoding input
+        RF_D3 : in std_logic_vector(15 downto 0);                    ---content to be stored in a given register
+        RF_WR : in std_logic;                                        
+        RF_RD : in std_logic;
+        CLK,RST : in std_logic;
+        RF_D1,RF_D2 : out std_logic_vector(15 downto 0);             ---output from registers
+        R7_PC_OUT : out std_logic_vector(15 downto 0)
+        );
+end entity;
+
+architecture regf of register_file is    
+    signal R0,R1,R2,R3,R4,R5,R6,R7 : std_logic_vector(15 downto 0);
+    --signal R1 : std_logic_vector(15 downto 0);
+    --signal R2 : std_logic_vector(15 downto 0);
+    --signal R3 : std_logic_vector(15 downto 0);
+    --signal R4 : std_logic_vector(15 downto 0);
+    --signal R5 : std_logic_vector(15 downto 0);
+    --signal R6 : std_logic_vector(15 downto 0);
+    --signal R7 : std_logic_vector(15 downto 0);
+	 signal D1_temp,D2_temp : std_logic_vector(15 downto 0);
+    --signal D2_temp : std_logic_vector(15 downto 0);
+begin
+    --writing to register when write_en is set
+    write_process : process(RF_A3,RF_WR,CLK,RST)
+    begin
+	     if(RST = '1') then 
+            R0 <= "0000000000000000";
+            R1 <= "0000000000000000";
+            R2 <= "0000000000000000";
+            R3 <= "0000000000000000";
+            R4 <= "0000000000000000";
+            R5 <= "0000000000000000";
+            R6 <= "0000000000000000";
+            R7 <= "0000000000000000";
+        elsif (CLK'event and CLK = '0') then  -- negative clock edge
+            if(RF_WR = '1') then
+                if(RF_A3 = "000") then
+                    R0 <= RF_D3;
+                end if;
+                if(RF_A3 = "001") then
+                    R1 <= RF_D3;
+                end if;
+                if(RF_A3 = "010") then
+                    R2 <= RF_D3;
+                end if;
+                if(RF_A3 = "011") then
+                    R3 <= RF_D3;
+                end if;
+                if(RF_A3 = "100") then
+                    R4 <= RF_D3;
+                end if;
+                if(RF_A3 = "101") then
+                    R5 <= RF_D3;
+                end if;
+                if(RF_A3 = "110") then
+                    R6 <= RF_D3;
+                end if;
+                if(RF_A3 = "111") then
+                    R7 <= RF_D3;
+                end if;
+            end if;
+        end if;
+    end process write_process;
+	 
+	 RF_D1 <= D1_temp when RF_RD = '1';
+	 RF_D2 <= D2_temp when RF_RD = '1';
+
+    --reading from the registers
+    read_process : process(RF_A1,RF_A2,RF_RD)
+
+
+    begin
+        if(RF_RD = '1') then
+            if(RF_A1 = "000") then
+                D1_temp <= R0;
+            end if;
+            if(RF_A1 = "001") then
+                D1_temp <= R1;
+            end if;
+            if(RF_A1 = "010") then
+                D1_temp <= R2;
+            end if;
+            if(RF_A1 = "011") then
+                D1_temp <= R3;
+            end if;
+            if(RF_A1 = "100") then
+                D1_temp <= R4;
+            end if;
+            if(RF_A1 = "101") then
+                D1_temp <= R5;
+            end if;
+            if(RF_A1 = "110") then
+                D1_temp <= R6;
+            end if;
+            if(RF_A1 = "111") then
+                D1_temp <= R7;
+            end if;
+            --Address 2
+            if(RF_A2 = "000") then
+                D2_temp <= R0;
+            end if;
+            if(RF_A2 = "001") then
+                D2_temp <= R1;
+            end if;
+            if(RF_A2 = "010") then
+                D2_temp <= R2;
+            end if;
+            if(RF_A2 = "011") then
+                D2_temp <= R3;
+            end if;
+            if(RF_A2 = "100") then
+                D2_temp <= R4;
+            end if;
+            if(RF_A2 = "101") then
+                D2_temp <= R5;
+            end if;
+            if(RF_A2 = "110") then
+                D2_temp <= R6;
+            end if;
+            if(RF_A2 = "111") then
+                D2_temp <= R7;
+            end if;    
+        end if;
+        --D1 <= D1_temp;
+        --D2 <= D2_temp;
+    end process read_process;
+
+    
+R7_PC_OUT <= R7;
+end regf;

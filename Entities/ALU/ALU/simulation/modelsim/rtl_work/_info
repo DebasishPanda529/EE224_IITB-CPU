@@ -1,0 +1,134 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/EE@IITB/EE 224/IITB_CPU_Project/ALU/simulation/modelsim
+Ealu
+Z1 w1669469175
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8D:/EE@IITB/EE 224/IITB_CPU_Project/ALU/ALU.vhd
+Z5 FD:/EE@IITB/EE 224/IITB_CPU_Project/ALU/ALU.vhd
+l0
+L4 1
+VBFC@n<[lC=J:n2UhDWSI72
+!s100 :L2E^YOEbf@Va0?Llm3MY2
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1669560326
+!i10b 1
+Z8 !s108 1669560326.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/EE@IITB/EE 224/IITB_CPU_Project/ALU/ALU.vhd|
+Z10 !s107 D:/EE@IITB/EE 224/IITB_CPU_Project/ALU/ALU.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aalu_arch
+R2
+R3
+DEx4 work 3 alu 0 22 BFC@n<[lC=J:n2UhDWSI72
+!i122 0
+l39
+L15 99
+VXG6[MibS3>2>VlYV37Ll<0
+!s100 :9GACY5:]DI6:P410^0^c2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edut
+Z13 w1669453709
+R2
+R3
+!i122 1
+R0
+Z14 8D:/EE@IITB/EE 224/IITB_CPU_Project/ALU/DUT.vhdl
+Z15 FD:/EE@IITB/EE 224/IITB_CPU_Project/ALU/DUT.vhdl
+l0
+L7 1
+VcRWdo4^fj1FM61LKH>AJH3
+!s100 gO^nFd=mzQSdhfG61aFeG3
+R6
+31
+Z16 !s110 1669560327
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-93|-work|work|D:/EE@IITB/EE 224/IITB_CPU_Project/ALU/DUT.vhdl|
+Z18 !s107 D:/EE@IITB/EE 224/IITB_CPU_Project/ALU/DUT.vhdl|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 cRWdo4^fj1FM61LKH>AJH3
+!i122 1
+l23
+L12 28
+V?GmQRA7k`h7YRM>1YbED83
+!s100 Aa]n?D6WdDZ8@zJMmcA772
+R6
+31
+R16
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
+Etestbench
+Z19 w1669464925
+R3
+R2
+!i122 2
+R0
+Z20 8D:/EE@IITB/EE 224/IITB_CPU_Project/ALU/Testbench.vhdl
+Z21 FD:/EE@IITB/EE 224/IITB_CPU_Project/ALU/Testbench.vhdl
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R16
+!i10b 1
+Z22 !s108 1669560327.000000
+Z23 !s90 -reportprogress|300|-93|-work|work|D:/EE@IITB/EE 224/IITB_CPU_Project/ALU/Testbench.vhdl|
+!s107 D:/EE@IITB/EE 224/IITB_CPU_Project/ALU/Testbench.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 2
+l69
+L9 132
+V:mWG@?6CU71BXX?lN[8[Q0
+!s100 j`Fl84Io9@la9^bOMBMaJ0
+R6
+31
+R16
+!i10b 1
+R22
+R23
+Z24 !s107 D:/EE@IITB/EE 224/IITB_CPU_Project/ALU/Testbench.vhdl|
+!i113 1
+R11
+R12

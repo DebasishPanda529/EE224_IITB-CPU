@@ -1,0 +1,153 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity state_FSM is 
+port(state: in std_logic_vector(4 downto 0);
+     op_code:in std_logic_vector(3 downto 0);
+	  C,Z,CLK,RST: in std_logic;
+	  next_state: out std_logic_vector(4 downto 0);
+	  control_var: out std_logic_vector(35 downto 0))
+end state_FSM;
+
+architecture Struct of state_FSM is
+constant S0: std_logic_vector(4 downto 0) := "00000";  
+constant S1: std_logic_vector(4 downto 0) := "00001";
+constant S2: std_logic_vector(4 downto 0) := "00010";
+constant S3: std_logic_vector(4 downto 0) := "00011";
+constant S4: std_logic_vector(4 downto 0) := "00100";
+constant S5: std_logic_vector(4 downto 0) := "00101";
+constant S6: std_logic_vector(4 downto 0) := "00110";
+constant S7: std_logic_vector(4 downto 0) := "00111";
+constant S8: std_logic_vector(4 downto 0) := "01000";
+constant S9: std_logic_vector(4 downto 0) := "01001";
+constant S10: std_logic_vector(4 downto 0) := "01010";
+constant S11: std_logic_vector(4 downto 0) := "01011";
+constant S12: std_logic_vector(4 downto 0) := "01100";
+constant S13: std_logic_vector(4 downto 0) := "01101";
+constant S14: std_logic_vector(4 downto 0) := "01110";
+constant S15: std_logic_vector(4 downto 0) := "01111";
+constant S16: std_logic_vector(4 downto 0) := "10000";
+constant S17: std_logic_vector(4 downto 0) := "10001";
+constant S18: std_logic_vector(4 downto 0) := "10010";
+
+begin
+
+clock: process(CLK,RST)
+  begin	
+		if(CLK='0' and CLK' event) then
+			if(RST='1') then
+				state <= S0; 
+			else
+				state <= next_state;
+			end if;
+		end if;
+	end process;
+
+fsm_transition: process(op_code,state,C,Z)
+begin
+ if (RST = '0') then
+   case state is
+      when S0 =>                                                      --- I am yet to include the conditional statements while executing the FSM
+		    if (op_code = "0000") then next_state <= S1;
+			 elsif (op_code = "0001") then next_state <= S1;
+			 elsif (op_code = "0010") then next_state <= S1;
+		    elsif (op_code = "0011") then next_state <= S1;
+			 elsif (op_code = "0100") then next_state <= S1;
+			 elsif (op_code = "0101") then next_state <= S1;
+          elsif (op-code = "1100") then next_state <= S2;
+          elsif (op_code = "1000") then next_state <= S2;
+          else next_state <= S1;
+			 end if;
+			 
+		when S1 =>
+		    if (op_code = "0000") then next_state <= S2;
+			 elsif (op_code = "0001") then next_state <= S2;
+			 elsif (op_code = "0010") then next_state <= S2;
+		    elsif (op_code = "0011") then next_state <= S8;
+			 elsif (op_code = "0100") then next_state <= S2;
+			 else next_state <= S2;
+			 end if;
+
+     when S2 =>
+		    if (op_code = "0000") then next_state <= S3;
+			 elsif (op_code = "0001") then next_state <= S6;
+			 elsif (op_code = "0010") then next_state <= S5;
+			 elsif (op_code = "0100") then next_state <= S9;
+			 elsif (op_code = "0101") then next_state <= S12;
+          elsif (op-code = "1100") then next_state <= S14;
+          elsif (op_code = "1000") then next_state <= S16;
+          else next_state <= S18;	
+		    end if;	 
+			 
+	  when S3 =>
+	       next_state <= S4;
+	  
+	  when S4 => 
+	       next_state <= S0;
+			 
+	  when S5 =>
+	       next_state <= S4;
+			 
+	  when S6 =>
+	       next_state <= S7;
+
+	  when S7 =>
+	       next_state <= S0;
+
+	  when S8 =>
+	       next_state <= S0;
+
+	  when S9 =>
+	       next_state <= S10;
+
+	  when S10 =>
+	       next_state <= S11;
+
+	  when S11 =>
+	       next_state <= S0;	
+	
+	  when S12 =>
+	       next_state <= S13;	
+	 
+	  when S13 =>
+	       next_state <= S0;
+			 
+	  when S14 =>
+	       next_state <= S15;
+			 
+	  when S15 =>
+	       next_state <= S0;
+		
+	  when S16 =>
+	       next_state <= S17;
+			 
+	  when S17 =>
+	       next_state <= S18;
+		
+	  when S18 =>
+	       next_state <= S0;
+			 
+ end case;
+ end if;		
+
+end process;
+end architecture; 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+

@@ -1,0 +1,56 @@
+|DUT
+input_vector[0] => sign_extend_9:add_instance.SE_in_9[0]
+input_vector[1] => sign_extend_9:add_instance.SE_in_9[1]
+input_vector[2] => sign_extend_9:add_instance.SE_in_9[2]
+input_vector[3] => sign_extend_9:add_instance.SE_in_9[3]
+input_vector[4] => sign_extend_9:add_instance.SE_in_9[4]
+input_vector[5] => sign_extend_9:add_instance.SE_in_9[5]
+input_vector[6] => sign_extend_9:add_instance.SE_in_9[6]
+input_vector[7] => sign_extend_9:add_instance.SE_in_9[7]
+input_vector[8] => sign_extend_9:add_instance.SE_in_9[8]
+output_vector[0] <= sign_extend_9:add_instance.SE_out_9[0]
+output_vector[1] <= sign_extend_9:add_instance.SE_out_9[1]
+output_vector[2] <= sign_extend_9:add_instance.SE_out_9[2]
+output_vector[3] <= sign_extend_9:add_instance.SE_out_9[3]
+output_vector[4] <= sign_extend_9:add_instance.SE_out_9[4]
+output_vector[5] <= sign_extend_9:add_instance.SE_out_9[5]
+output_vector[6] <= sign_extend_9:add_instance.SE_out_9[6]
+output_vector[7] <= sign_extend_9:add_instance.SE_out_9[7]
+output_vector[8] <= sign_extend_9:add_instance.SE_out_9[8]
+output_vector[9] <= sign_extend_9:add_instance.SE_out_9[9]
+output_vector[10] <= sign_extend_9:add_instance.SE_out_9[10]
+output_vector[11] <= sign_extend_9:add_instance.SE_out_9[11]
+output_vector[12] <= sign_extend_9:add_instance.SE_out_9[12]
+output_vector[13] <= sign_extend_9:add_instance.SE_out_9[13]
+output_vector[14] <= sign_extend_9:add_instance.SE_out_9[14]
+output_vector[15] <= sign_extend_9:add_instance.SE_out_9[15]
+
+
+|DUT|sign_extend_9:add_instance
+SE_in_9[0] => SE_out_9[7].DATAIN
+SE_in_9[1] => SE_out_9[8].DATAIN
+SE_in_9[2] => SE_out_9[9].DATAIN
+SE_in_9[3] => SE_out_9[10].DATAIN
+SE_in_9[4] => SE_out_9[11].DATAIN
+SE_in_9[5] => SE_out_9[12].DATAIN
+SE_in_9[6] => SE_out_9[13].DATAIN
+SE_in_9[7] => SE_out_9[14].DATAIN
+SE_in_9[8] => SE_out_9[15].DATAIN
+SE_out_9[0] <= <GND>
+SE_out_9[1] <= <GND>
+SE_out_9[2] <= <GND>
+SE_out_9[3] <= <GND>
+SE_out_9[4] <= <GND>
+SE_out_9[5] <= <GND>
+SE_out_9[6] <= <GND>
+SE_out_9[7] <= SE_in_9[0].DB_MAX_OUTPUT_PORT_TYPE
+SE_out_9[8] <= SE_in_9[1].DB_MAX_OUTPUT_PORT_TYPE
+SE_out_9[9] <= SE_in_9[2].DB_MAX_OUTPUT_PORT_TYPE
+SE_out_9[10] <= SE_in_9[3].DB_MAX_OUTPUT_PORT_TYPE
+SE_out_9[11] <= SE_in_9[4].DB_MAX_OUTPUT_PORT_TYPE
+SE_out_9[12] <= SE_in_9[5].DB_MAX_OUTPUT_PORT_TYPE
+SE_out_9[13] <= SE_in_9[6].DB_MAX_OUTPUT_PORT_TYPE
+SE_out_9[14] <= SE_in_9[7].DB_MAX_OUTPUT_PORT_TYPE
+SE_out_9[15] <= SE_in_9[8].DB_MAX_OUTPUT_PORT_TYPE
+
+

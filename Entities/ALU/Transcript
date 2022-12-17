@@ -1,0 +1,113 @@
+# Reading pref.tcl
+# do dut_instance_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU/IITB_CPU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:23:46 on Nov 27,2022
+# vcom -reportprogress 300 -93 -work work D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU/IITB_CPU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ALU
+# -- Compiling architecture alu_arch of ALU
+# -- Compiling entity register_component
+# -- Compiling architecture rc of register_component
+# -- Compiling entity register_file
+# -- Compiling architecture regf of register_file
+# -- Loading package NUMERIC_STD
+# -- Compiling entity memory_unit
+# -- Compiling architecture abstract of memory_unit
+# -- Compiling entity sign_extend_6
+# -- Compiling architecture Extend_1 of sign_extend_6
+# -- Compiling entity sign_extend_9
+# -- Compiling architecture Extend of sign_extend_9
+# -- Compiling entity Datapath
+# -- Compiling architecture flow of Datapath
+# -- Compiling entity state_FSM
+# -- Compiling architecture Struct of state_FSM
+# -- Compiling entity IITB_CPU
+# -- Compiling architecture cpu of IITB_CPU
+# End time: 20:23:46 on Nov 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU/DUT.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:23:46 on Nov 27,2022
+# vcom -reportprogress 300 -93 -work work D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU/DUT.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 20:23:46 on Nov 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU/Testbench.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:23:46 on Nov 27,2022
+# vcom -reportprogress 300 -93 -work work D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU/Testbench.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 20:23:47 on Nov 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 20:23:47 on Nov 27,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behave)
+# Loading work.dut(dutwrap)
+# Loading ieee.numeric_std(body)
+# Loading work.iitb_cpu(cpu)
+# Loading work.datapath(flow)
+# Loading work.register_component(rc)
+# Loading work.alu(alu_arch)
+# Loading work.memory_unit(abstract)
+# Loading work.register_file(regf)
+# Loading work.sign_extend_6(extend_1)
+# Loading work.sign_extend_9(extend)
+# Loading work.state_fsm(struct)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 247 ns  Iteration: 1  Instance: /testbench/dut_instance/add_instance/datapath_instance/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 437 ns  Iteration: 1  Instance: /testbench/dut_instance/add_instance/datapath_instance/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 627 ns  Iteration: 1  Instance: /testbench/dut_instance/add_instance/datapath_instance/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 817 ns  Iteration: 1  Instance: /testbench/dut_instance/add_instance/datapath_instance/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1007 ns  Iteration: 1  Instance: /testbench/dut_instance/add_instance/datapath_instance/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1197 ns  Iteration: 1  Instance: /testbench/dut_instance/add_instance/datapath_instance/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1387 ns  Iteration: 1  Instance: /testbench/dut_instance/add_instance/datapath_instance/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1577 ns  Iteration: 1  Instance: /testbench/dut_instance/add_instance/datapath_instance/mem
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 2, found 0.
+#    Time: 1710 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
+#    Time: 1710 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
+#    Time: 1710 ns  Iteration: 0  Instance: /testbench
+# ** Note: SUCCESS, all tests passed.
+#    Time: 1729 ns  Iteration: 0  Instance: /testbench

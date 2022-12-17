@@ -1,0 +1,115 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity datapath is 
+	port(state: in std_logic_vector(4 downto 0); c,z: out std_logic_vector(15 downto 0));
+end datapath;
+
+architecture path of datapath is
+signal m_address,m_data,alu_a,alu_b,alu_c,PC,t1,t2,t3,rfd1,rfd2,rfd3: std_logic_vector(15 downto 0);
+signal rfa1,rfa2,rfa3: std_logic_vector(2 downto 0);
+signal se6: std_logic_vector(5 downto 0);
+signal se9: std_logic_vector(8 downto 0);
+begin
+process(state)
+begin
+	case state is 
+
+		when"00000"=>
+			m_address<= PC;
+			m_data<=t1;
+			
+		when "00001"=>
+			alu_a<=pc;
+			alu_b<="0000000000000001";
+			PC<=alu_c;
+			
+		when "00010"=>
+			rfa1<=t1(11 downto 9);
+			rfa2<=t1(8 downto 6);
+			t2<=rfd1;
+			t3<=rfd2;
+			
+		when "00011"=>
+			alu_a<=t2;
+			alu_b<=t3;
+			t2<=alu_c;
+			
+		when "00100"=>
+			rfd3<=t2;
+			rfa3<=t1(5 downto 3);
+			
+		when "00101"=>
+			alu_a<=t2;
+			alu_b<=t3;
+			t2<=alu_c;
+			
+		when "00110"=>
+			alu_a<=t2;
+			alu_b<=se6;
+			se6<=t1(5 downto 0);
+			t2<=alu_c;
+			
+		when "00111"=>
+			rfd3<=t2;
+			rfa3<=t1(5 downto 3);
+			
+		when "01000"=>
+			rfd3<=se9;
+			se9<=t1(8 downto 0);
+			rfa3<=t1(11 downto 9);
+			
+		when "01001"=>
+			alu_a<= t3;
+			alu_b<=se6;
+			se6<=t1(5 downto 0);
+			t2<=alu_c;
+			
+		when "01010"=>
+			m_address<=t2;
+			t2<=m_data;
+		
+		when "01011"=>
+			rfa3<=t1(11 downto 9);
+			rfd3<=t2;
+		
+		when "01100"=>
+			alu_a<=t3;
+			alu_b<=se6;
+			se6<=t1(5 downto 0);
+			t2<=alu_c;
+			
+		when "01101"=>
+			m_address<=t3;
+			t2<=m_data;
+			
+		when "01110"=>
+			alu_a<=t2;
+			alu_b<=t3;
+			z<=alu_c;
+			
+		when "01111"=>
+			alu_a<=pc;
+			alu_b<=se6;
+			se6<=t1(5 downto 0);
+			if (z="0000000000000001") then
+				pc<=alu_c;
+			end if;
+			
+		when  "10000"=>
+			rfd3<=pc;
+			rfa3<=t1(11 downto 9);
+		
+		when "10001"=>
+			alu_a<= pc;
+			alu_b<=se9;
+			se9<=t1(8 downto 0);
+			pc<=alu_c;
+		
+		when "10010"=>
+			rfd3<=pc;
+			rfa3<=t1(11 downto 9);
+			pc<=t3;
+	end case;
+end process;
+end architecture path;

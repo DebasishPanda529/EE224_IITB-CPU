@@ -1,0 +1,117 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do dut_instance_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:13:35 on Dec 17,2022
+# vcom -reportprogress 300 -93 -work work D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ALU
+# -- Compiling architecture alu_arch of ALU
+# -- Compiling entity register_component
+# -- Compiling architecture rc of register_component
+# -- Compiling entity register_file
+# -- Compiling architecture regf of register_file
+# -- Loading package NUMERIC_STD
+# -- Compiling entity memory_unit
+# -- Compiling architecture abstract of memory_unit
+# -- Compiling entity sign_extend_6
+# -- Compiling architecture Extend_1 of sign_extend_6
+# -- Compiling entity sign_extend_9
+# -- Compiling architecture Extend of sign_extend_9
+# -- Compiling entity Datapath
+# -- Compiling architecture flow of Datapath
+# -- Compiling entity state_FSM
+# -- Compiling architecture Struct of state_FSM
+# -- Compiling entity IITB_CPU
+# -- Compiling architecture cpu of IITB_CPU
+# End time: 19:13:35 on Dec 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/Testbench.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:13:36 on Dec 17,2022
+# vcom -reportprogress 300 -93 -work work D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/Testbench.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity iitb_cpu_tb
+# -- Compiling architecture bhv of iitb_cpu_tb
+# End time: 19:13:36 on Dec 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  iitb_cpu_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" iitb_cpu_tb 
+# Start time: 19:13:36 on Dec 17,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.iitb_cpu_tb(bhv)
+# Loading ieee.numeric_std(body)
+# Loading work.iitb_cpu(cpu)
+# Loading work.datapath(flow)
+# Loading work.register_component(rc)
+# Loading work.alu(alu_arch)
+# Loading work.memory_unit(abstract)
+# Loading work.register_file(regf)
+# Loading work.sign_extend_6(extend_1)
+# Loading work.sign_extend_9(extend)
+# Loading work.state_fsm(struct)
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Lenovo  Hostname: DP  ProcessID: 21068
+#           Attempting to use alternate WLF file "./wlft4z1ciq".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4z1ciq
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+add wave -position insertpoint  \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/RF_A1 \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/RF_A2 \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/RF_A3 \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/RF_D3 \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/RF_WR \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/RF_RD \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/CLK \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/RST \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/RF_D1 \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/RF_D2 \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/R7_PC_OUT \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/R0 \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/R1 \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/R2 \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/R3 \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/R4 \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/R7 \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/R5 \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/R6
+add wave -position insertpoint  \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/mem/CLK \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/mem/MWR \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/mem/MDR \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/mem/RST \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/mem/mem_address \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/mem/mem_data_in \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/mem/mem_data_out \
+sim:/iitb_cpu_tb/dut_instance/datapath_instance/mem/data
+# (vsim-4077) Logging very large object: /iitb_cpu_tb/dut_instance/datapath_instance/mem/data
+run -all
+run -all
+# End time: 19:16:28 on Dec 17,2022, Elapsed time: 0:02:52
+# Errors: 0, Warnings: 2
