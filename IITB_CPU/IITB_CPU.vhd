@@ -143,10 +143,11 @@ begin
 
     read_proc: process(CLK,RST,reg_data)
     begin
-		  --if(RST = '1') then reg_out <= "0000000000000000";
-        if (CLK'event and CLK = '0') then  --writing at negative clock edge
+		  if(RST = '1') then reg_out <= "0000000000000000";
+        elsif (CLK'event and CLK = '0') then  --writing at negative clock edge
             reg_out <= reg_data;
         end if;
+		  
     end process read_proc;
 
 end rc;
@@ -631,12 +632,12 @@ begin
 clock: process(CLK,RST)
   begin	
 	if(CLK='0' and CLK' event) then
---			if(RST='1') then
---				present_state <= S0; 
---			else
+			if(RST='1') then
+				present_state <= S0; 
+    		else
 			present_state <= next_state;
---		   end if;
---	      else null;
+		   end if;
+	      else null;
 		end if;
 	end process;
 

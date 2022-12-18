@@ -11,10 +11,10 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd}
+# vcom -93 -work work {D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:13:35 on Dec 17,2022
-# vcom -reportprogress 300 -93 -work work D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd 
+# Start time: 08:33:38 on Dec 18,2022
+# vcom -reportprogress 300 -93 -work work D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -37,24 +37,24 @@
 # -- Compiling architecture Struct of state_FSM
 # -- Compiling entity IITB_CPU
 # -- Compiling architecture cpu of IITB_CPU
-# End time: 19:13:35 on Dec 17,2022, Elapsed time: 0:00:00
+# End time: 08:33:38 on Dec 18,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/Testbench.vhdl}
+# vcom -93 -work work {D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/Testbench.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:13:36 on Dec 17,2022
-# vcom -reportprogress 300 -93 -work work D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/Testbench.vhdl 
+# Start time: 08:33:38 on Dec 18,2022
+# vcom -reportprogress 300 -93 -work work D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/Testbench.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity iitb_cpu_tb
 # -- Compiling architecture bhv of iitb_cpu_tb
-# End time: 19:13:36 on Dec 17,2022, Elapsed time: 0:00:00
+# End time: 08:33:39 on Dec 18,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  iitb_cpu_tb
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" iitb_cpu_tb 
-# Start time: 19:13:36 on Dec 17,2022
+# Start time: 08:33:39 on Dec 18,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -73,9 +73,9 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Lenovo  Hostname: DP  ProcessID: 21068
-#           Attempting to use alternate WLF file "./wlft4z1ciq".
+#           Attempting to use alternate WLF file "./wlftcscdns".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft4z1ciq
+#           Using alternate file: ./wlftcscdns
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -101,6 +101,7 @@ sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/R4 \
 sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/R7 \
 sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/R5 \
 sim:/iitb_cpu_tb/dut_instance/datapath_instance/rf/R6
+run -all
 add wave -position insertpoint  \
 sim:/iitb_cpu_tb/dut_instance/datapath_instance/mem/CLK \
 sim:/iitb_cpu_tb/dut_instance/datapath_instance/mem/MWR \
@@ -112,6 +113,5 @@ sim:/iitb_cpu_tb/dut_instance/datapath_instance/mem/mem_data_out \
 sim:/iitb_cpu_tb/dut_instance/datapath_instance/mem/data
 # (vsim-4077) Logging very large object: /iitb_cpu_tb/dut_instance/datapath_instance/mem/data
 run -all
-run -all
-# End time: 19:16:28 on Dec 17,2022, Elapsed time: 0:02:52
+# End time: 08:43:06 on Dec 18,2022, Elapsed time: 0:09:27
 # Errors: 0, Warnings: 2

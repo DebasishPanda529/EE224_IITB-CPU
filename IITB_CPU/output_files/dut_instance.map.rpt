@@ -1,5 +1,5 @@
 Analysis & Synthesis report for dut_instance
-Sat Dec 17 18:52:17 2022
+Sun Dec 18 08:29:04 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Dec 17 18:52:17 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun Dec 18 08:29:04 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; dut_instance                                ;
 ; Top-level Entity Name              ; IITB_CPU                                    ;
@@ -169,44 +169,44 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                    ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; IITB_CPU.vhd                     ; yes             ; User VHDL File  ; D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                            ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
+; IITB_CPU.vhd                     ; yes             ; User VHDL File  ; D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 3     ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; RST   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 3     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+;                                             ;                   ;
+; Total combinational functions               ; 0                 ;
+; Logic element usage by number of LUT inputs ;                   ;
+;     -- 4 input functions                    ; 0                 ;
+;     -- 3 input functions                    ; 0                 ;
+;     -- <=2 input functions                  ; 0                 ;
+;                                             ;                   ;
+; Logic elements by mode                      ;                   ;
+;     -- normal mode                          ; 0                 ;
+;     -- arithmetic mode                      ; 0                 ;
+;                                             ;                   ;
+; Total registers                             ; 0                 ;
+;     -- Dedicated logic registers            ; 0                 ;
+;     -- I/O registers                        ; 0                 ;
+;                                             ;                   ;
+; I/O pins                                    ; 3                 ;
+;                                             ;                   ;
+; Embedded Multiplier 9-bit elements          ; 0                 ;
+;                                             ;                   ;
+; Maximum fan-out node                        ; CLK_output~output ;
+; Maximum fan-out                             ; 1                 ;
+; Total fan-out                               ; 3                 ;
+; Average fan-out                             ; 0.50              ;
++---------------------------------------------+-------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -459,7 +459,7 @@ Encoding Type:  One-Hot
 +--------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------+
 ; Register name                                                ; Reason for Removal ; Registers Removed due to This Register                                              ;
 +--------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------+
-; Datapath:datapath_instance|register_component:T1|reg_out[12] ; Lost Fanouts       ; Datapath:datapath_instance|memory_unit:mem|mem_data_out[12],                        ;
+; Datapath:datapath_instance|register_component:T1|reg_out[15] ; Lost Fanouts       ; Datapath:datapath_instance|memory_unit:mem|mem_data_out[15],                        ;
 ;                                                              ;                    ; state_FSM:fsm_instance|present_state.S1, state_FSM:fsm_instance|present_state.S2,   ;
 ;                                                              ;                    ; state_FSM:fsm_instance|present_state.S3, state_FSM:fsm_instance|present_state.S4,   ;
 ;                                                              ;                    ; state_FSM:fsm_instance|present_state.S5, state_FSM:fsm_instance|present_state.S6,   ;
@@ -513,9 +513,9 @@ Encoding Type:  One-Hot
 ;                                                              ;                    ; Datapath:datapath_instance|register_file:rf|R1[13]                                  ;
 ; Datapath:datapath_instance|register_component:T3|reg_out[15] ; Lost Fanouts       ; Datapath:datapath_instance|register_file:rf|R0[15],                                 ;
 ;                                                              ;                    ; Datapath:datapath_instance|register_file:rf|R1[15]                                  ;
-; Datapath:datapath_instance|register_component:T1|reg_out[13] ; Lost Fanouts       ; Datapath:datapath_instance|memory_unit:mem|mem_data_out[13]                         ;
 ; Datapath:datapath_instance|register_component:T1|reg_out[14] ; Lost Fanouts       ; Datapath:datapath_instance|memory_unit:mem|mem_data_out[14]                         ;
-; Datapath:datapath_instance|register_component:T1|reg_out[15] ; Lost Fanouts       ; Datapath:datapath_instance|memory_unit:mem|mem_data_out[15]                         ;
+; Datapath:datapath_instance|register_component:T1|reg_out[13] ; Lost Fanouts       ; Datapath:datapath_instance|memory_unit:mem|mem_data_out[13]                         ;
+; Datapath:datapath_instance|register_component:T1|reg_out[12] ; Lost Fanouts       ; Datapath:datapath_instance|memory_unit:mem|mem_data_out[12]                         ;
 ; Datapath:datapath_instance|register_component:T1|reg_out[0]  ; Lost Fanouts       ; Datapath:datapath_instance|memory_unit:mem|mem_data_out[0]                          ;
 ; Datapath:datapath_instance|register_component:T1|reg_out[1]  ; Lost Fanouts       ; Datapath:datapath_instance|memory_unit:mem|mem_data_out[1]                          ;
 ; Datapath:datapath_instance|register_component:T2|reg_out[10] ; Lost Fanouts       ; Datapath:datapath_instance|memory_unit:mem|mem_data_out[10]                         ;
@@ -543,26 +543,29 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
-; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:datapath_instance|ALU:alu_instance|ALU_C[6] ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:datapath_instance|register_file:rf|Mux129   ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:datapath_instance|register_file:rf|Mux157   ;
-; 9:1                ; 9 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux95                     ;
-; 11:1               ; 16 bits   ; 112 LEs       ; 32 LEs               ; 80 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux113                    ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux29                     ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux146                    ;
-; 10:1               ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux79                     ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux68                     ;
-; 10:1               ; 9 bits    ; 54 LEs        ; 36 LEs               ; 18 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux75                     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux60                     ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux50                     ;
-; 1:1                ; 16 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux129                    ;
-; 12:1               ; 6 bits    ; 48 LEs        ; 18 LEs               ; 30 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux92                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |IITB_CPU|state_FSM:fsm_instance|present_state                  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |IITB_CPU|state_FSM:fsm_instance|present_state                  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |IITB_CPU|state_FSM:fsm_instance|present_state                  ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:datapath_instance|ALU:alu_instance|ALU_C[11] ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:datapath_instance|register_file:rf|Mux138    ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:datapath_instance|register_file:rf|Mux159    ;
+; 9:1                ; 9 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux101                     ;
+; 11:1               ; 16 bits   ; 112 LEs       ; 32 LEs               ; 80 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux117                     ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux34                      ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux146                     ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux82                      ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux69                      ;
+; 10:1               ; 9 bits    ; 54 LEs        ; 36 LEs               ; 18 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux78                      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux61                      ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux52                      ;
+; 1:1                ; 16 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux132                     ;
+; 12:1               ; 6 bits    ; 48 LEs        ; 18 LEs               ; 30 LEs                 ; No         ; |IITB_CPU|Datapath:datapath_instance|Mux92                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -605,303 +608,306 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Dec 17 18:52:04 2022
+    Info: Processing started: Sun Dec 18 08:28:49 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c dut_instance
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhdl
+    Info (12022): Found design unit 1: iitb_cpu_tb-bhv File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/Testbench.vhdl Line: 7
+    Info (12023): Found entity 1: iitb_cpu_tb File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/Testbench.vhdl Line: 4
 Info (12021): Found 18 design units, including 9 entities, in source file iitb_cpu.vhd
-    Info (12022): Found design unit 1: ALU-alu_arch File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 15
-    Info (12022): Found design unit 2: register_component-rc File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 131
-    Info (12022): Found design unit 3: register_file-regf File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 172
-    Info (12022): Found design unit 4: memory_unit-abstract File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 279
-    Info (12022): Found design unit 5: sign_extend_6-Extend_1 File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 311
-    Info (12022): Found design unit 6: sign_extend_9-Extend File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 330
-    Info (12022): Found design unit 7: Datapath-flow File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 354
-    Info (12022): Found design unit 8: state_FSM-Struct File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 624
-    Info (12022): Found design unit 9: IITB_CPU-cpu File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 787
-    Info (12023): Found entity 1: ALU File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 4
-    Info (12023): Found entity 2: register_component File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 122
-    Info (12023): Found entity 3: register_file File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 161
-    Info (12023): Found entity 4: memory_unit File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 268
-    Info (12023): Found entity 5: sign_extend_6 File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 306
-    Info (12023): Found entity 6: sign_extend_9 File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 325
-    Info (12023): Found entity 7: Datapath File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 344
-    Info (12023): Found entity 8: state_FSM File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 616
-    Info (12023): Found entity 9: IITB_CPU File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 781
+    Info (12022): Found design unit 1: ALU-alu_arch File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 15
+    Info (12022): Found design unit 2: register_component-rc File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 131
+    Info (12022): Found design unit 3: register_file-regf File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 173
+    Info (12022): Found design unit 4: memory_unit-abstract File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 280
+    Info (12022): Found design unit 5: sign_extend_6-Extend_1 File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 312
+    Info (12022): Found design unit 6: sign_extend_9-Extend File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 331
+    Info (12022): Found design unit 7: Datapath-flow File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 355
+    Info (12022): Found design unit 8: state_FSM-Struct File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 625
+    Info (12022): Found design unit 9: IITB_CPU-cpu File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 788
+    Info (12023): Found entity 1: ALU File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 4
+    Info (12023): Found entity 2: register_component File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 122
+    Info (12023): Found entity 3: register_file File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 162
+    Info (12023): Found entity 4: memory_unit File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 269
+    Info (12023): Found entity 5: sign_extend_6 File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 307
+    Info (12023): Found entity 6: sign_extend_9 File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 326
+    Info (12023): Found entity 7: Datapath File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 345
+    Info (12023): Found entity 8: state_FSM File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 617
+    Info (12023): Found entity 9: IITB_CPU File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 782
 Info (12127): Elaborating entity "IITB_CPU" for the top level hierarchy
-Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:datapath_instance" File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 814
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(429): inferring latch(es) for signal or variable "memAddr", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(429): inferring latch(es) for signal or variable "t1in", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(429): inferring latch(es) for signal or variable "enable", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(429): inferring latch(es) for signal or variable "aluA", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(429): inferring latch(es) for signal or variable "aluB", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(429): inferring latch(es) for signal or variable "aluOp", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(429): inferring latch(es) for signal or variable "rfa3", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(429): inferring latch(es) for signal or variable "rfd3", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(429): inferring latch(es) for signal or variable "rfa1", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(429): inferring latch(es) for signal or variable "rfa2", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(429): inferring latch(es) for signal or variable "t2in", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(429): inferring latch(es) for signal or variable "t3in", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(429): inferring latch(es) for signal or variable "mem_in", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(429): inferring latch(es) for signal or variable "Z_beq", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "Z_beq" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[0]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[1]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[2]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[3]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[4]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[5]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[6]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[7]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[8]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[9]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[10]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[11]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[12]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[13]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[14]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "mem_in[15]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[0]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[1]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[2]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[3]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[4]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[5]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[6]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[7]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[8]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[9]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[10]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[11]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[12]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[13]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[14]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t3in[15]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[0]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[1]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[2]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[3]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[4]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[5]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[6]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[7]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[8]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[9]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[10]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[11]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[12]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[13]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[14]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t2in[15]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfa2[0]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfa2[1]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfa2[2]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfa1[0]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfa1[1]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfa1[2]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[0]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[1]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[2]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[3]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[4]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[5]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[6]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[7]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[8]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[9]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[10]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[11]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[12]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[13]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[14]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfd3[15]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfa3[0]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfa3[1]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "rfa3[2]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluOp[0]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluOp[1]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[0]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[1]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[2]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[3]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[4]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[5]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[6]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[7]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[8]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[9]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[10]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[11]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[12]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[13]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[14]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluB[15]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[0]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[1]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[2]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[3]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[4]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[5]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[6]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[7]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[8]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[9]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[10]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[11]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[12]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[13]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[14]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "aluA[15]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "enable[0]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "enable[1]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "enable[2]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "enable[3]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "enable[4]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "enable[5]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "enable[6]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "enable[7]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "enable[8]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[0]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[1]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[2]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[3]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[4]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[5]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[6]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[7]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[8]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[9]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[10]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[11]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[12]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[13]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[14]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "t1in[15]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[0]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[1]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[2]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[3]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[4]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[5]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[6]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[7]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[8]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[9]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[10]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[11]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[12]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[13]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[14]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (10041): Inferred latch for "memAddr[15]" at IITB_CPU.vhd(429) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Info (12128): Elaborating entity "register_component" for hierarchy "Datapath:datapath_instance|register_component:T1" File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 415
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(137): inferring latch(es) for signal or variable "reg_data", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[0]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[1]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[2]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[3]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[4]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[5]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[6]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[7]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[8]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[9]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[10]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[11]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[12]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[13]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[14]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (10041): Inferred latch for "reg_data[15]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 137
-Info (12128): Elaborating entity "ALU" for hierarchy "Datapath:datapath_instance|ALU:alu_instance" File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 419
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(41): inferring latch(es) for signal or variable "ALU_C", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(41): inferring latch(es) for signal or variable "Z_init", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(41): inferring latch(es) for signal or variable "C", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(41): inferring latch(es) for signal or variable "Z", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(41): inferring latch(es) for signal or variable "Z0", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "Z0" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "Z" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "C" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[0]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[1]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[2]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[3]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[4]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[5]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[6]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[7]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[8]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[9]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[10]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[11]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[12]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[13]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[14]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "ALU_C[15]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 41
-Info (10041): Inferred latch for "alu_proc:Z_init" at IITB_CPU.vhd(49) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 49
-Info (12128): Elaborating entity "memory_unit" for hierarchy "Datapath:datapath_instance|memory_unit:mem" File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 421
-Info (12128): Elaborating entity "register_file" for hierarchy "Datapath:datapath_instance|register_file:rf" File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 423
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(209): inferring latch(es) for signal or variable "RF_D1", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(209): inferring latch(es) for signal or variable "RF_D2", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[0]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[1]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[2]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[3]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[4]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[5]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[6]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[7]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[8]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[9]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[10]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[11]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[12]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[13]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[14]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D2[15]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[0]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[1]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[2]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[3]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[4]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[5]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[6]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[7]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[8]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[9]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[10]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[11]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[12]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[13]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[14]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (10041): Inferred latch for "RF_D1[15]" at IITB_CPU.vhd(209) File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 209
-Info (12128): Elaborating entity "sign_extend_6" for hierarchy "Datapath:datapath_instance|sign_extend_6:sign_extend_10" File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 425
-Info (12128): Elaborating entity "sign_extend_9" for hierarchy "Datapath:datapath_instance|sign_extend_9:sign_extend_7" File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 426
-Info (12128): Elaborating entity "state_FSM" for hierarchy "state_FSM:fsm_instance" File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 816
+Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:datapath_instance" File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 815
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(430): inferring latch(es) for signal or variable "memAddr", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(430): inferring latch(es) for signal or variable "t1in", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(430): inferring latch(es) for signal or variable "enable", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(430): inferring latch(es) for signal or variable "aluA", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(430): inferring latch(es) for signal or variable "aluB", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(430): inferring latch(es) for signal or variable "aluOp", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(430): inferring latch(es) for signal or variable "rfa3", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(430): inferring latch(es) for signal or variable "rfd3", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(430): inferring latch(es) for signal or variable "rfa1", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(430): inferring latch(es) for signal or variable "rfa2", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(430): inferring latch(es) for signal or variable "t2in", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(430): inferring latch(es) for signal or variable "t3in", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(430): inferring latch(es) for signal or variable "mem_in", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(430): inferring latch(es) for signal or variable "Z_beq", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "Z_beq" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[0]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[1]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[2]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[3]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[4]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[5]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[6]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[7]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[8]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[9]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[10]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[11]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[12]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[13]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[14]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "mem_in[15]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[0]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[1]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[2]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[3]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[4]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[5]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[6]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[7]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[8]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[9]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[10]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[11]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[12]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[13]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[14]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t3in[15]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[0]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[1]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[2]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[3]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[4]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[5]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[6]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[7]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[8]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[9]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[10]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[11]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[12]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[13]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[14]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t2in[15]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfa2[0]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfa2[1]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfa2[2]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfa1[0]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfa1[1]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfa1[2]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[0]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[1]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[2]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[3]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[4]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[5]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[6]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[7]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[8]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[9]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[10]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[11]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[12]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[13]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[14]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfd3[15]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfa3[0]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfa3[1]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "rfa3[2]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluOp[0]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluOp[1]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[0]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[1]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[2]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[3]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[4]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[5]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[6]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[7]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[8]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[9]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[10]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[11]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[12]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[13]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[14]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluB[15]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[0]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[1]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[2]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[3]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[4]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[5]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[6]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[7]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[8]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[9]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[10]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[11]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[12]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[13]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[14]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "aluA[15]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "enable[0]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "enable[1]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "enable[2]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "enable[3]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "enable[4]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "enable[5]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "enable[6]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "enable[7]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "enable[8]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[0]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[1]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[2]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[3]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[4]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[5]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[6]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[7]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[8]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[9]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[10]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[11]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[12]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[13]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[14]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "t1in[15]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[0]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[1]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[2]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[3]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[4]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[5]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[6]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[7]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[8]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[9]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[10]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[11]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[12]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[13]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[14]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (10041): Inferred latch for "memAddr[15]" at IITB_CPU.vhd(430) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Info (12128): Elaborating entity "register_component" for hierarchy "Datapath:datapath_instance|register_component:T1" File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 416
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(137): inferring latch(es) for signal or variable "reg_data", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[0]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[1]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[2]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[3]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[4]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[5]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[6]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[7]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[8]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[9]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[10]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[11]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[12]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[13]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[14]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (10041): Inferred latch for "reg_data[15]" at IITB_CPU.vhd(137) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 137
+Info (12128): Elaborating entity "ALU" for hierarchy "Datapath:datapath_instance|ALU:alu_instance" File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 420
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(41): inferring latch(es) for signal or variable "ALU_C", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(41): inferring latch(es) for signal or variable "Z_init", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(41): inferring latch(es) for signal or variable "C", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(41): inferring latch(es) for signal or variable "Z", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(41): inferring latch(es) for signal or variable "Z0", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "Z0" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "Z" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "C" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[0]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[1]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[2]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[3]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[4]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[5]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[6]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[7]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[8]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[9]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[10]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[11]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[12]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[13]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[14]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "ALU_C[15]" at IITB_CPU.vhd(41) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 41
+Info (10041): Inferred latch for "alu_proc:Z_init" at IITB_CPU.vhd(49) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 49
+Info (12128): Elaborating entity "memory_unit" for hierarchy "Datapath:datapath_instance|memory_unit:mem" File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 422
+Info (12128): Elaborating entity "register_file" for hierarchy "Datapath:datapath_instance|register_file:rf" File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 424
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(210): inferring latch(es) for signal or variable "RF_D1", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Warning (10631): VHDL Process Statement warning at IITB_CPU.vhd(210): inferring latch(es) for signal or variable "RF_D2", which holds its previous value in one or more paths through the process File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[0]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[1]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[2]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[3]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[4]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[5]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[6]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[7]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[8]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[9]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[10]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[11]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[12]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[13]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[14]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D2[15]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[0]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[1]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[2]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[3]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[4]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[5]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[6]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[7]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[8]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[9]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[10]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[11]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[12]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[13]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[14]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (10041): Inferred latch for "RF_D1[15]" at IITB_CPU.vhd(210) File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 210
+Info (12128): Elaborating entity "sign_extend_6" for hierarchy "Datapath:datapath_instance|sign_extend_6:sign_extend_10" File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 426
+Info (12128): Elaborating entity "sign_extend_9" for hierarchy "Datapath:datapath_instance|sign_extend_9:sign_extend_7" File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 427
+Info (12128): Elaborating entity "state_FSM" for hierarchy "state_FSM:fsm_instance" File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 817
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276013): RAM logic "Datapath:datapath_instance|memory_unit:mem|data" is uninferred because MIF is not supported for the selected family File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 281
-Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[3]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[4]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[0]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[7]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[5]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[6]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[2]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[1]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
-Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[8]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 429
+    Info (276013): RAM logic "Datapath:datapath_instance|memory_unit:mem|data" is uninferred because MIF is not supported for the selected family File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 282
+Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[3]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[4]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[0]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[7]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[5]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[6]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[2]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[1]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
+Warning (14026): LATCH primitive "Datapath:datapath_instance|enable[8]" is permanently enabled File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 430
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "CLK_output" is stuck at VCC File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 784
+    Warning (13410): Pin "CLK_output" is stuck at VCC File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 785
 Info (17049): 215 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "RST" File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 783
-    Warning (15610): No output dependent on input pin "CLK" File: D:/EE@IITB/EE 224/IITB_CPU_Project/IITB_CPU/IITB_CPU.vhd Line: 783
+    Warning (15610): No output dependent on input pin "RST" File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 784
+    Warning (15610): No output dependent on input pin "CLK" File: D:/EE@IITB/EE 224/IITB_CPU/IITB_CPU/IITB_CPU.vhd Line: 784
 Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 1 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 4807 megabytes
-    Info: Processing ended: Sat Dec 17 18:52:17 2022
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 4799 megabytes
+    Info: Processing ended: Sun Dec 18 08:29:04 2022
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:17
 
 
