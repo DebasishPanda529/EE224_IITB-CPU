@@ -24,8 +24,8 @@ architecture alu_arch of ALU is
    begin
      		for i in 0 to 15 loop 
 			if i=0 then
-				sum(i) :=  A(i) xor B(i);
-				carry(i) := A(i) and B(i) ;
+			   sum(i) :=  A(i) xor B(i);
+			   carry(i) := A(i) and B(i) ;
 			else
 			   sum(i) :=  A(i) xor B(i) xor carry(i-1);
 			   carry(i) := (A(i) and B(i)) or (carry(i-1) and (A(i) xor B(i))) ;
