@@ -28,7 +28,7 @@ architecture flow of Datapath is
   component register_component is 
     port(
         reg_in : in std_logic_vector(15 downto 0);
-	CLK,RST: in std_logic;
+        CLK,RST: in std_logic;
         write_enable: in std_logic;
         reg_out : out std_logic_vector(15 downto 0));
   end component;
@@ -67,9 +67,9 @@ architecture flow of Datapath is
 
 	signal aluA, aluB, aluC, memAddr, mem_in, mem_out, t1in, t1out, t2in, t2out, t3in, t3out, rfd1, rfd2, rfd3, r7out, se10, se7 : std_logic_vector(15 downto 0) := (others => '0');  
 	signal aluCi, aluCo, aluZo, aluZ, Z_beq : std_logic;     
-	signal aluOp : std_logic_vector(1 downto 0);       ---to select the operation in ALU
+	signal aluOp : std_logic_vector(1 downto 0);                        -- to select the operation in ALU
 	signal rfa1, rfa2, rfa3 : std_logic_vector(2 downto 0) := (others => '0');
-	signal enable : std_logic_vector(8 downto 0) := (others => '0');    --used to determine which component will be activated
+	signal enable : std_logic_vector(8 downto 0) := (others => '0');    -- used to determine which component will be activated
 	
 begin                                            
 	--Registers                                     
@@ -97,7 +97,7 @@ begin
 			memAddr <= r7out;
 			t1in <= mem_out;              
 			enable <= "001000001";
-			
+			  
 		when "00001"=>
 			aluA <= r7out;
 			aluB <= "0000000000000001";
@@ -112,7 +112,7 @@ begin
 			t2in <= rfd1;
 			t3in <= rfd2;               
 			enable <= "100000110";
-			
+			  
 		when "00011"=>
 			aluA <= t2out;            
 			aluB <= t3out;
@@ -208,12 +208,12 @@ begin
 			enable <= "010000000";
 		
 		when "10010"=>
-	               rfa1 <= t1out(8 downto 6);
-                       rfa3 <= "111";
-                       rfd3 <= rfd1;			         
-                       enable <= "010000000";	
+	                rfa1 <= t1out(8 downto 6);
+                        rfa3 <= "111";
+                        rfd3 <= rfd1;			         
+                        enable <= "010000000";	
 	
-                 when "10011"=>
+                when "10011"=>
 		        t2in <= "0000000000000000";
 			rfa2 <= t1out(11 downto 9);
 			t3in <= rfd2;                 
@@ -239,19 +239,19 @@ begin
 			t2in <= aluC;                 
 			enable <= "000000010";
 		
-	        when "10110"=>
+	   when "10110"=>
 			aluA <= t3out;
 			aluB <= "0000000000000001";
 			aluOp <= "00";
-		   if(t1out(to_integer(unsigned(t2out(2 downto 0)))) = '1') then
+		        if(t1out(to_integer(unsigned(t2out(2 downto 0)))) = '1') then
 			  memAddr <= t3out;
 			  rfa1 <= t2out(2 downto 0);
 			  mem_in <= rfd1;
 			  t3in <= aluC;
-		   end if;
-			  enable <= "000100100";
+		        end if;
+			enable <= "000100100";
 
-               when others =>
+          when others =>
 		   null;
 		
 	end case;
@@ -264,4 +264,4 @@ t2_cnd_out <= t2out(2 downto 0);
 C <= aluCo;
 Z <= aluZ;
 
-end architecture flow; 
+end architecture flow;
