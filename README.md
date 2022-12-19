@@ -1,6 +1,6 @@
-Course Instructor:- [Prof.Virendra Singh](https://www.ee.iitb.ac.in/~viren/)
+Course Instructor :- [Prof.Virendra Singh](https://www.ee.iitb.ac.in/~viren/)
 
-Team members:-
+Team members :-
 - [Debasish Panda](https://github.com/DebasishPanda529)[21D070021]
 - [Bhakti Matsyapal](https://github.com/Bhakti2305)[210070021]
 - [Ayan Das](https://github.com/Sad-Naya)[210070016]
@@ -10,8 +10,8 @@ Team members:-
 IITB-CPU is a 16-bit elementary computer developed for teaching that is based 
 on the Little Computer Architecture. The IITB-CPU is an 8-register, 16-bit 
 computer system. It has 8 general-purpose registers (R0 to R7). Register R7 
-always stores Program Counter. PC points to the next instruction. All addresses 
-are short word addresses (i.e. address 0 corresponds to the first two bytes 
+always stores [Program Counter](https://en.wikipedia.org/wiki/Processor_register). PC points to the next instruction. All addresses 
+are short [word](https://en.wikipedia.org/wiki/Word_(computer_architecture)) addresses (i.e. address 0 corresponds to the first two bytes 
 of main memory, address 1 corresponds to the second two bytes of main memory, etc.). 
 This architecture uses a condition code register which has two flags Carry flag(C) 
 and Zero flag(Z). The IITB-CPU is very simple, but it is general enough to 
