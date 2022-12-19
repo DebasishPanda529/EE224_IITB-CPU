@@ -1,3 +1,6 @@
+Team members: Debasish Panda[21D070021], Bhakti Matsyapal[210070021], Ayan Das[210070016], Anuja Sathe[210070010]
+
+
 IITB-CPU is a 16-bit elementary computer developed for teaching that is based 
 on the Little Computer Architecture. The IITB-CPU is an 8-register, 16-bit 
 computer system. It has 8 general-purpose registers (R0 to R7). Register R7 
