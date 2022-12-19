@@ -13,34 +13,21 @@ solve complex problems. The architecture allows predicated instruction execution
 and multiple load and store execution. There are three machine-code instruction 
 formats (R, I, and J type) and a total of 14 instructions.
 
-R Type Instruction format
-| Opcode | Register A (RA) | Register B (RB) | Register C (RC) | Unused | Condition (CZ) |
-  (4 bit)      (3 bit)           (3 bit)           (3 bit)       (1 bit)     (2 bit)
-
-I Type Instruction format
-| Opcode | Register A (RA) | Register C (RC) |   Immediate   |
-  (4 bit)      (3 bit)           (3 bit)       (signed 6 bit)
-
-J Type Instruction format
-| Opcode | Register A (RA) |   Immediate   |
-  (4 bit)      (3 bit)       (signed 9 bit)
-
-
 Entities designed for implementing the CPU:
 
-1) Arithmetic Logic Unit(ALU): As the name suggests, it performs various arithmetic 
+- Arithmetic Logic Unit(ALU): As the name suggests, it performs various arithmetic 
                                operations on operands, such as addition, NAND and XOR.
 
-2) Memory unit: Stores the program(sequential set of instructions) to be uploaded to 
+- Memory unit: Stores the program(sequential set of instructions) to be uploaded to 
                the CPU.
 
-3) Sign extenders(SE6, SE9): The sign extenders pad a specified number of zeroes to
+- Sign extenders(SE6, SE9): The sign extenders pad a specified number of zeroes to
                              the most significant or least significant part of the 
                              binary numbers.
 
-4) Temporary registers: These registers help store variables while processing the 
+- Temporary registers: These registers help store variables while processing the 
                         instructions. As is evident, they all store 16-bit binary 
                         values.
 
-5) Register file: It is essentially a collection of registers(which store data and 
+- Register file: It is essentially a collection of registers(which store data and 
                   addresses), and can be controlled by an enable input.
