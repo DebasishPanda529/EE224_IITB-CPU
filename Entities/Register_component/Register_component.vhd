@@ -4,8 +4,8 @@ use ieee.std_logic_1164.all;
 entity register_component is 
     port(
         reg_in : in std_logic_vector(15 downto 0);
-		  CLK,RST: in std_logic;
-		  write_enable: in std_logic;
+        CLK,RST: in std_logic;
+	write_enable: in std_logic;
         reg_out : out std_logic_vector(15 downto 0)
     );
 end entity;
