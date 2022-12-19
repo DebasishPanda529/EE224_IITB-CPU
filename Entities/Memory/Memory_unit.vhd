@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity memory_unit is
     port(CLK : in std_logic;
         MWR : in std_logic;     ---write enable bit
-		  MDR : in std_logic;     ---read enable bit
+	MDR : in std_logic;     ---read enable bit
         RST : in std_logic;     
         mem_address : in std_logic_vector(15 downto 0);
         mem_data_in : in std_logic_vector(15 downto 0);
@@ -25,8 +25,8 @@ begin
         if (CLK'event and CLK = '0') then  
             if (MWR = '1') then
                 data(to_integer(unsigned(mem_address))) <= mem_data_in;
-				 elsif(MDR = '1') then
-				     mem_data_out <= data(to_integer(unsigned(mem_address)));
+	    elsif(MDR = '1') then
+	        mem_data_out <= data(to_integer(unsigned(mem_address)));
             end if;
         end if;
     end process memory_proc;
