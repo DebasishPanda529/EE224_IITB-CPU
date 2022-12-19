@@ -16,7 +16,7 @@ of main memory, address 1 corresponds to the second two bytes of main memory, et
 This architecture uses a condition code register which has two flags Carry flag(C) 
 and Zero flag(Z). The IITB-CPU is very simple, but it is general enough to 
 solve complex problems. The architecture allows predicated instruction execution
-and multiple load and store execution. There are three machine-code instruction 
+and multiple [load and store execution](https://eng.libretexts.org/Bookshelves/Computer_Science/Programming_Languages/Introduction_to_Assembly_Language_Programming%3A_From_Soup_to_Nuts%3A_ARM_Edition_(Kann)/04%3A_New_Page/4.04%3A_New_Page). There are three machine-code instruction 
 formats (R, I, and J type) and a total of 14 instructions.
 
 Entities designed for implementing the CPU:
