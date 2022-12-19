@@ -1,4 +1,4 @@
-Team members: Debasish Panda[21D070021], Bhakti Matsyapal[210070021], Ayan Das[210070016], Anuja Sathe[210070010]
+Team members: Debasish Panda([21D070021](21d070021@iitb.ac.in)), Bhakti Matsyapal([210070021](210070021@iitb.ac.in)), Ayan Das([210070016](210070016@iitb.ac.in)), Anuja Sathe([210070010](210070010@iitb.ac.in))
 
 
 IITB-CPU is a 16-bit elementary computer developed for teaching that is based 
