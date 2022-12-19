@@ -5,11 +5,11 @@ entity ALU is
  port (
    ALU_A: in std_logic_vector(15 downto 0);
    ALU_B: in std_logic_vector(15 downto 0);
-	CV,EN: in std_logic_vector(1 downto 0);        ---control variables to decide the operation, enable to decide whether to modify C/Z(EN(0):C,EN(1):Z)
-	C_in,Z_in: in std_logic;                       ---initial carry,zero flags
-	Z0: out std_logic;                             ---to retain initial value of zero while executing BEQ
+   CV,EN: in std_logic_vector(1 downto 0);        ---control variables to decide the operation, enable to decide whether to modify C/Z(EN(0):C,EN(1):Z)
+   C_in,Z_in: in std_logic;                       ---initial carry,zero flags
+   Z0: out std_logic;                             ---to retain initial value of zero while executing BEQ
    ALU_C: out std_logic_vector(15 downto 0);
-	C,Z: out std_logic) ;
+   C,Z: out std_logic) ;
 end ALU;
 
 architecture alu_arch of ALU is
@@ -19,7 +19,7 @@ architecture alu_arch of ALU is
     return std_logic_vector is
 
     variable sum : std_logic_vector(15 downto 0) := (others => '0');
-	 variable carry : std_logic_vector(15 downto 0) := (others => '0');
+    variable carry : std_logic_vector(15 downto 0) := (others => '0');
 	 
    begin
      		for i in 0 to 15 loop 
@@ -28,7 +28,7 @@ architecture alu_arch of ALU is
 				carry(i) := A(i) and B(i) ;
 			else
 			   sum(i) :=  A(i) xor B(i) xor carry(i-1);
-				carry(i) := (A(i) and B(i)) or (carry(i-1) and (A(i) xor B(i))) ;
+			   carry(i) := (A(i) and B(i)) or (carry(i-1) and (A(i) xor B(i))) ;
 			end if;
 		end loop;
     
@@ -52,7 +52,7 @@ if CV = "00" then
   C_init := dummy_1(16);
   
   if(dummy_1 = "00000000000000000") then                 ---conditional to check for zero output
-     Z_init := '1';
+  Z_init := '1';
   end if;
   
   if(EN(0) = '1') then
@@ -122,15 +122,15 @@ use ieee.std_logic_1164.all;
 entity register_component is 
     port(
         reg_in : in std_logic_vector(15 downto 0);
-		  CLK,RST: in std_logic;
-		  write_enable: in std_logic;
+	CLK,RST: in std_logic;
+	write_enable: in std_logic;
         reg_out : out std_logic_vector(15 downto 0)
     );
 end entity;
 
 architecture rc of register_component is
 
-	signal reg_data : std_logic_vector(15 downto 0);
+signal reg_data : std_logic_vector(15 downto 0);
 	
 begin
 
@@ -143,7 +143,7 @@ begin
 
     read_proc: process(CLK,RST,reg_data)
     begin
-		  if(RST = '1') then reg_out <= "0000000000000000";
+	if(RST = '1') then reg_out <= "0000000000000000";
         elsif (CLK'event and CLK = '0') then  --writing at negative clock edge
             reg_out <= reg_data;
         end if;
@@ -202,7 +202,7 @@ begin
 						when others =>
 						  null;
                 end case; 	
-				end if;
+	    end if;
         end if;
     end process write_process;
 
@@ -269,7 +269,7 @@ use ieee.numeric_std.all;
 entity memory_unit is
     port(CLK : in std_logic;
         MWR : in std_logic;     ---write enable bit
-		  MDR : in std_logic;     ---read enable bit
+	MDR : in std_logic;     ---read enable bit
         RST : in std_logic;     
         mem_address : in std_logic_vector(15 downto 0);
         mem_data_in : in std_logic_vector(15 downto 0);
@@ -288,8 +288,8 @@ begin
         if (CLK'event and CLK = '0') then  
             if (MWR = '1') then
                 data(to_integer(unsigned(mem_address))) <= mem_data_in;
-				 elsif(MDR = '1') then
-				     mem_data_out <= data(to_integer(unsigned(mem_address)));
+	    elsif(MDR = '1') then
+		mem_data_out <= data(to_integer(unsigned(mem_address)));
             end if;
         end if;
     end process memory_proc;
@@ -345,10 +345,10 @@ use ieee.numeric_std.all;
 entity Datapath is 
 	port(
 	     stateID: in std_logic_vector(4 downto 0);
-        CLK,RST : in std_logic;
-		  op_code: out std_logic_vector(3 downto 0);
-		  condition: out std_logic_vector(1 downto 0);
-		  t2_cnd_out: out std_logic_vector(2 downto 0); 
+             CLK,RST : in std_logic;
+	     op_code: out std_logic_vector(3 downto 0);
+	     condition: out std_logic_vector(1 downto 0);
+	     t2_cnd_out: out std_logic_vector(2 downto 0); 
 	     C,Z: out std_logic);
 end Datapath;
 
@@ -358,18 +358,18 @@ architecture flow of Datapath is
     port(
        ALU_A: in std_logic_vector(15 downto 0);
        ALU_B: in std_logic_vector(15 downto 0);
-	    CV,EN: in std_logic_vector(1 downto 0);      
-	    C_in,Z_in: in std_logic; 
+       CV,EN: in std_logic_vector(1 downto 0);      
+       C_in,Z_in: in std_logic; 
        Z0 : out std_logic;		 
        ALU_C: out std_logic_vector(15 downto 0);
-	    C,Z: out std_logic);
+       C,Z: out std_logic);
   end component;
 	       
   component register_component is 
     port(
         reg_in : in std_logic_vector(15 downto 0);
-		  CLK,RST: in std_logic;
-		  write_enable: in std_logic;
+        CLK,RST: in std_logic;
+        write_enable: in std_logic;
         reg_out : out std_logic_vector(15 downto 0));
   end component;
   
@@ -386,7 +386,7 @@ architecture flow of Datapath is
   
   component memory_unit is
     port(
-	     CLK,RST : in std_logic;
+	CLK,RST : in std_logic;
         MWR,MDR : in std_logic;         
         mem_address : in std_logic_vector(15 downto 0);
         mem_data_in : in std_logic_vector(15 downto 0);
@@ -395,14 +395,14 @@ architecture flow of Datapath is
   
   component sign_extend_6 is
      port(
-	     SE_in: in std_logic_vector(5 downto 0);
+	SE_in: in std_logic_vector(5 downto 0);
         SE_out: out std_logic_vector(15 downto 0));
   end component;
   
   component sign_extend_9 is
 	  port(
 	     SE_in_9: in std_logic_vector(8 downto 0);
-        SE_out_9: out std_logic_vector(15 downto 0));
+             SE_out_9: out std_logic_vector(15 downto 0));
   end component;
 
 	signal aluA, aluB, aluC, memAddr, mem_in, mem_out, t1in, t1out, t2in, t2out, t3in, t3out, rfd1, rfd2, rfd3, r7out, se10, se7 : std_logic_vector(15 downto 0) := (others => '0');  
@@ -444,7 +444,7 @@ begin
 			aluOp <= "00";
 			rfa3 <= "111";
 			rfd3 <= aluC;                  
-         enable <= "010000000";						
+                        enable <= "010000000";						
 			
 		when "00010"=>
 			rfa1 <= t1out(11 downto 9);
@@ -528,7 +528,7 @@ begin
 		when "01111"=>
 			aluA <= r7out;
 			if (Z_beq = '1') then aluB <= se10;
-         else aluB <= "0000000000000001";
+                        else aluB <= "0000000000000001";
 			end if;  
 			rfa3 <= "111";
 			rfd3 <= aluC; 
@@ -548,13 +548,13 @@ begin
 			enable <= "010000000";
 		
 		when "10010"=>
-	      rfa1 <= t1out(8 downto 6);
-         rfa3 <= "111";
-         rfd3 <= rfd1;			         
-         enable <= "010000000";	
+	                rfa1 <= t1out(8 downto 6);
+                        rfa3 <= "111";
+                        rfd3 <= rfd1;			         
+                        enable <= "010000000";	
 	
-      when "10011"=>
-		   t2in <= "0000000000000000";
+                when "10011"=>
+		        t2in <= "0000000000000000";
 			rfa2 <= t1out(11 downto 9);
 			t3in <= rfd2;                 
 			enable <= "110000110";  
@@ -564,8 +564,8 @@ begin
 			memAddr <= t3out;
 			rfd3 <= mem_out;
 			rfa3 <= t2out(2 downto 0);
-         aluA <= t3out;
-		   aluB <= "0000000000000001";
+                        aluA <= t3out;
+		        aluB <= "0000000000000001";
 			aluOp <= "00";
 			if (t1out(to_integer(unsigned(t2out(2 downto 0)))) = '1') then t3in <= aluC;
 			end if;
@@ -573,7 +573,7 @@ begin
 			enable(1 downto 0) <= "00"; enable(4 downto 3) <= "00";
 		
 		when "10101"=>
-		   aluA <= t2out;
+		        aluA <= t2out;
 			aluB <= "0000000000000001";
 			aluOp <= "00";
 			t2in <= aluC;                 
@@ -583,15 +583,15 @@ begin
 			aluA <= t3out;
 			aluB <= "0000000000000001";
 			aluOp <= "00";
-		   if(t1out(to_integer(unsigned(t2out(2 downto 0)))) = '1') then
+		        if(t1out(to_integer(unsigned(t2out(2 downto 0)))) = '1') then
 			  memAddr <= t3out;
 			  rfa1 <= t2out(2 downto 0);
 			  mem_in <= rfd1;
 			  t3in <= aluC;
-		   end if;
+		        end if;
 			enable <= "000100100";
 
-      when others =>
+          when others =>
 		   null;
 		
 	end case;
@@ -617,9 +617,9 @@ use ieee.numeric_std.all;
 entity state_FSM is 
 port(op_code:in std_logic_vector(3 downto 0);
      condition: in std_logic_vector(1 downto 0);
-	  t2_cnd: in std_logic_vector(2 downto 0);                          ---t2_cnd is there to check looping for LM/SM
-	  C,Z,CLK,RST: in std_logic;
-	  stateID: out std_logic_vector(4 downto 0));
+     t2_cnd: in std_logic_vector(2 downto 0);                          ---t2_cnd is there to check looping for LM/SM
+     C,Z,CLK,RST: in std_logic;
+     stateID: out std_logic_vector(4 downto 0));
 end state_FSM;
 
 architecture Struct of state_FSM is
@@ -633,135 +633,135 @@ clock: process(CLK,RST)
   begin	
 	if(CLK='0' and CLK' event) then
 			if(RST='1') then
-				present_state <= S0; 
-    		else
-			present_state <= next_state;
-		   end if;
-	      else null;
-		end if;
-	end process;
+			   present_state <= S0; 
+    		        else
+			   present_state <= next_state;
+		        end if;
+	 else null;
+	 end if;
+  end process;
 
 fsm_transition: process(op_code, condition, present_state, C, Z, RST, t2_cnd)
 begin
    case present_state is
       when S0 =>   
           stateID <= "00000";                           
-		    if (op_code = "1100" or op_code = "1000" or op_code = "1001") then next_state <= S2;
+          if (op_code = "1100" or op_code = "1000" or op_code = "1001") then next_state <= S2;
           else next_state <= S1;
-			 end if;
+	  end if;
 			 
-		when S1 =>
-          stateID <= "00001";
-		    if (op_code = "0000" and condition = "00" and (C = '1' or Z = '1')) then next_state <= S0;
-		    elsif (op_code = "0000" and condition = "01" and Z = '0') then next_state <= S0;
-		    elsif (op_code = "0000" and condition = "10" and C = '0') then next_state <= S0;			
-			 elsif (op_code = "0010" and condition = "00" and (C = '1' or Z = '1')) then next_state <= S0;
-		    elsif (op_code = "0010" and condition = "01" and Z = '0') then next_state <= S0;
-		    elsif (op_code = "0010" and condition = "10" and C = '0') then next_state <= S0;			 
-		    elsif (op_code = "0011") then next_state <= S8;
-			 elsif (op_code = "0110") then next_state <= S19;
-			 else next_state <= S2;
-			 end if;
+       when S1 =>
+           stateID <= "00001";
+           if (op_code = "0000" and condition = "00" and (C = '1' or Z = '1')) then next_state <= S0;
+           elsif (op_code = "0000" and condition = "01" and Z = '0') then next_state <= S0;
+	   elsif (op_code = "0000" and condition = "10" and C = '0') then next_state <= S0;			
+           elsif (op_code = "0010" and condition = "00" and (C = '1' or Z = '1')) then next_state <= S0;
+           elsif (op_code = "0010" and condition = "01" and Z = '0') then next_state <= S0;
+	   elsif (op_code = "0010" and condition = "10" and C = '0') then next_state <= S0;			 
+	   elsif (op_code = "0011") then next_state <= S8;
+           elsif (op_code = "0110") then next_state <= S19;
+	   else next_state <= S2;
+	   end if;
 
-     when S2 =>
+          when S2 =>
           stateID <= "00010";
-		    if (op_code = "0000") then next_state <= S3;
-			 elsif (op_code = "0001") then next_state <= S6;
-			 elsif (op_code = "0010") then next_state <= S5;
-			 elsif (op_code = "0100") then next_state <= S9;
-			 elsif (op_code = "0101") then next_state <= S12;
+          if (op_code = "0000") then next_state <= S3;
+          elsif (op_code = "0001") then next_state <= S6;
+	  elsif (op_code = "0010") then next_state <= S5;
+	  elsif (op_code = "0100") then next_state <= S9;
+	  elsif (op_code = "0101") then next_state <= S12;
           elsif (op_code = "1100") then next_state <= S14;
           else next_state <= S16;	
-		    end if;	 
+          end if;	 
 			 
 	  when S3 =>
           stateID <= "00011";
-	       next_state <= S4;
+	  next_state <= S4;
 	  
 	  when S4 =>
           stateID <= "00100"; 
-	       next_state <= S0;
+	  next_state <= S0;
 			 
 	  when S5 =>
           stateID <= "00101";
-	       next_state <= S4;
+	  next_state <= S4;
 			 
 	  when S6 =>
           stateID <= "00110";
-	       next_state <= S7;
+	  next_state <= S7;
 
 	  when S7 =>
           stateID <= "00111";
-	       next_state <= S0;
+	  next_state <= S0;
 
 	  when S8 =>
           stateID <= "01000";
-	       next_state <= S0;
+	  next_state <= S0;
 
 	  when S9 =>
           stateID <= "01001";
-	       next_state <= S10;
+	  next_state <= S10;
 
 	  when S10 =>
           stateID <= "01010";
-	       next_state <= S11;
+	  next_state <= S11;
 
 	  when S11 =>
           stateID <= "01011";
-	       next_state <= S0;	
+	  next_state <= S0;	
 	
 	  when S12 =>
           stateID <= "01100";
-	       next_state <= S13;	
+	  next_state <= S13;	
 	 
 	  when S13 =>
           stateID <= "01101";
-	       next_state <= S0;
+	  next_state <= S0;
 			 
 	  when S14 =>
           stateID <= "01110";
-	       next_state <= S15;
+	  next_state <= S15;
 			 
 	  when S15 =>
           stateID <= "01111";
-	       next_state <= S0;
+	  next_state <= S0;
 		
 	  when S16 =>         
           stateID <= "10000";
-	       if (op_code = "1001") then next_state <= S17;
-			 else next_state <= S18;
-			 end if;
+	  if (op_code = "1001") then next_state <= S17;
+	  else next_state <= S18;
+          end if;
 			 
 	  when S17 =>
           stateID <= "10001";
-	       next_state <= S0;
+	  next_state <= S0;
 		
 	  when S18 =>
           stateID <= "10010";
-	       next_state <= S0;
+	  next_state <= S0;
 			 
 	  when S19 =>                                                 ---first step of LM and SM
-	       stateID <= "10011";
-			 if(op_code = "0110") then next_state <= S20;
-			 else next_state <= S22;
-			 end if;
+	  stateID <= "10011";
+          if(op_code = "0110") then next_state <= S20;
+	  else next_state <= S22;
+	  end if;
 			 
 	  when S20 =>                                                 ---looping stage 1 of LM
-	       stateID <= "10100";
-			 next_state <= S21;
+	  stateID <= "10100";
+	  next_state <= S21;
 	  
 	  when S21 =>                                                 ---looping stage 2 of LM and SM both
-	       stateID <= "10101";
-			 if (to_integer(unsigned(t2_cnd)) < 8) then
-			   if (op_code = "0110") then next_state <= S20;
-			   else next_state <= S22;
-			   end if;
-			 else next_state <= S0;
-			 end if;
+	  stateID <= "10101";
+	  if (to_integer(unsigned(t2_cnd)) < 7) then
+	    if (op_code = "0110") then next_state <= S20;
+	    else next_state <= S22;
+	    end if;
+	  else next_state <= S0;
+	  end if;
 			 
 	  when S22 =>                                                 ---looping stage 1 of SM                                       
-      	 stateID <= "10110"; 
-			 next_state <= S21; 
+      	  stateID <= "10110"; 
+	  next_state <= S21; 
 			 
 	  when others =>
           null;
@@ -798,10 +798,10 @@ architecture cpu of IITB_CPU is
   component Datapath is 
     port(stateID: in std_logic_vector(4 downto 0);
          CLK,RST: in std_logic;
-		   op_code: out std_logic_vector(3 downto 0);
-		   condition: out std_logic_vector(1 downto 0);
-			t2_cnd_out: out std_logic_vector(2 downto 0); 
-	      C,Z: out std_logic);
+	 op_code: out std_logic_vector(3 downto 0);
+	 condition: out std_logic_vector(1 downto 0);
+	 t2_cnd_out: out std_logic_vector(2 downto 0); 
+	 C,Z: out std_logic);
   end component;
   
   signal S0 : std_logic_vector(3 downto 0);            ---for op_code
