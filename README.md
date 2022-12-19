@@ -1,4 +1,4 @@
-Team members: Debasish Panda([21D070021](21d070021@iitb.ac.in)), Bhakti Matsyapal([210070021](210070021@iitb.ac.in)), Ayan Das([210070016](210070016@iitb.ac.in)), Anuja Sathe([210070010](210070010@iitb.ac.in))
+Team members: [Debasish Panda](DebasishPanda529)[21D070021], [Bhakti Matsyapal]()[210070021], [Ayan Das]()[210070016], [Anuja Sathe]()[210070010]
 
 
 IITB-CPU is a 16-bit elementary computer developed for teaching that is based 
@@ -15,19 +15,19 @@ formats (R, I, and J type) and a total of 14 instructions.
 
 Entities designed for implementing the CPU:
 
-- Arithmetic Logic Unit(ALU): As the name suggests, it performs various arithmetic 
+- [Arithmetic Logic Unit(ALU)](Entities/ALU/ALU/ALU.vhd): As the name suggests, it performs various arithmetic 
                                operations on operands, such as addition, NAND and XOR.
 
-- Memory unit: Stores the program(sequential set of instructions) to be uploaded to 
+- [Memory unit](Entities/Memory/Memory_unit.vhd): Stores the program(sequential set of instructions) to be uploaded to 
                the CPU.
 
-- Sign extenders(SE6, SE9): The sign extenders pad a specified number of zeroes to
+- Sign extenders([SE6](Entities/SE6/SE6/sign_extend_6.vhd), [SE9](Entities/SE9/SE9/sign_extend_9.vhdl)): The sign extenders pad a specified number of zeroes to
                              the most significant or least significant part of the 
                              binary numbers.
 
-- Temporary registers: These registers help store variables while processing the 
+- [Temporary registers](Entities/Register_component/Register_component.vhd): These registers help store variables while processing the 
                         instructions. As is evident, they all store 16-bit binary 
                         values.
 
-- Register file: It is essentially a collection of registers(which store data and 
+- [Register file](Entities/Register_file/Register_file/Register_file.vhd): It is essentially a collection of registers(which store data and 
                   addresses), and can be controlled by an enable input.
