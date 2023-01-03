@@ -12,7 +12,7 @@ Team members :-
 IITB-CPU is a 16-bit elementary computer developed for teaching that is based 
 on the Little Computer Architecture. The IITB-CPU is an 8-register, 16-bit 
 computer system. It has 8 general-purpose registers (R0 to R7). Register R7 
-always stores [Program Counter](https://en.wikipedia.org/wiki/Processor_register). PC points to the next instruction. All addresses 
+always stores [Program Counter](https://en.wikipedia.org/wiki/Processor_register) (also known as the **Instruction Pointer**). PC points to the next instruction. All addresses 
 are short [word](https://en.wikipedia.org/wiki/Word_(computer_architecture)) addresses (i.e. address 0 corresponds to the first two bytes 
 of main memory, address 1 corresponds to the second two bytes of main memory, etc.). 
 This architecture uses a condition code register which has two flags Carry flag(C) 
@@ -26,7 +26,7 @@ Entities designed for implementing the CPU:
 - [Arithmetic Logic Unit(ALU)](Entities/ALU/ALU/ALU.vhd): As the name suggests, it performs various arithmetic 
                                operations on operands, such as addition, NAND and XOR.
 
-- [Memory unit](Entities/Memory/Memory_unit.vhd): Stores the program(sequential set of instructions) to be uploaded to 
+- [Memory unit](Entities/Memory/Memory_unit.vhd): Stores the program (sequential set of instructions) to be uploaded to 
                the CPU.
 
 - Sign extenders([SE6](Entities/SE6/SE6/sign_extend_6.vhd), [SE9](Entities/SE9/SE9/sign_extend_9.vhdl)): The sign extenders pad a specified number of zeroes to
@@ -37,5 +37,5 @@ Entities designed for implementing the CPU:
                         instructions. As is evident, they all store 16-bit binary 
                         values.
 
-- [Register file](Entities/Register_file/Register_file/Register_file.vhd): It is essentially a collection of registers(which store data and 
+- [Register file](Entities/Register_file/Register_file/Register_file.vhd): It is essentially a collection of registers (which store data and 
                   addresses), and can be controlled by an enable input.
