@@ -780,9 +780,8 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity IITB_CPU is 
-   port(
-	     CLK, RST : in std_logic;
-		  CLK_output : out std_logic);
+   port(CLK, RST : in std_logic;
+        CLK_output : out std_logic);
 end IITB_CPU;
 
 architecture cpu of IITB_CPU is 
@@ -790,9 +789,9 @@ architecture cpu of IITB_CPU is
   component state_FSM is
     port(op_code: in std_logic_vector(3 downto 0);
          condition: in std_logic_vector(1 downto 0);
-			t2_cnd: in std_logic_vector(2 downto 0);
-	      C,Z,CLK,RST: in std_logic;
-	      stateID: out std_logic_vector(4 downto 0));
+         t2_cnd: in std_logic_vector(2 downto 0);
+	 C,Z,CLK,RST: in std_logic;
+	 stateID: out std_logic_vector(4 downto 0));
   end component;
   
   component Datapath is 
