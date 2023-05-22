@@ -1,6 +1,6 @@
 # IITB-CPU 
 
-Course Instructor :- [Prof.Virendra Singh](https://www.ee.iitb.ac.in/~viren/)
+Course Instructor :- [Prof. Virendra Singh](https://www.ee.iitb.ac.in/~viren/)
 
 Team members :-
 - [Debasish Panda](https://github.com/DebasishPanda529)[21D070021]
