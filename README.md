@@ -29,7 +29,7 @@ Entities designed for implementing the CPU:
 - [Memory unit](Entities/Memory/Memory_unit.vhd): Stores the program (sequential set of instructions) to be uploaded to 
                the CPU.
 
-- Sign extenders([SE6](Entities/SE6/SE6/sign_extend_6.vhd), [SE9](Entities/SE9/SE9/sign_extend_9.vhdl)): The sign extenders pad a specified number of zeroes to
+- Sign extenders ([SE6](Entities/SE6/SE6/sign_extend_6.vhd), [SE9](Entities/SE9/SE9/sign_extend_9.vhdl)): The sign extenders pad a specified number of zeroes to
                              the most significant or least significant part of the 
                              binary numbers.
 
